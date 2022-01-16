@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ping Pong Score Keeper</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css">
+</head>
+
+<body>
+    <section class="section has-text-centered">
+        <div class="columns">
+            <div id="gamePointLeftBlock2" class="column is-2 has-background-primary is-hidden-mobile"></div>
+            <!--Empty column to left of image-->
+            <div class="column is-8">
+                <!--Column containing image and both Player buttons-->
+                <div class="card">
+                    <div class="card-image ">
+                        <figure class="image is-4by3">
+                            <img src="https://images.unsplash.com/photo-1584813539806-2538b8d918c6?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1740&q=80"
+                                alt="Ping Pong Image">
+                        </figure>
+                    </div>
+                </div>
+                <div class="block"></div>
+                <span class="is-size-5-mobile is-size-4-tablet is-size-3-desktop has-text-grey" id="scoreRules">In ping
+                    pong, you must win by 2!<br>What would you like to play to?</span>
+                <div class="block"></div>
+                <div id="playtodiv" class="select is-info is-small">
+                    <select name="playto" id="playto">
+                        <option value="6">6</option>
+                        <option value="7">7</option>
+                        <option value="8">8</option>
+                        <option value="9">9</option>
+                        <option value="10">10</option>
+                        <option selected value="11">11</option>
+                        <option value="12">12</option>
+                        <option value="13">13</option>
+                        <option value="14">14</option>
+                        <option value="16">16</option>
+                        <option value="17">17</option>
+                        <option value="18">18</option>
+                        <option value="19">19</option>
+                        <option value="20">20</option>
+                    </select>
+                </div>
+                <div class="block"></div>
+                <div class="columns">
+                    <div id="gamePointLeftBlock1" class="column is-2 has-background-primary is-hidden-mobile"></div>
+                    <div class="column is-4">
+                        <input class="input is-primary is-small" id="p1Name" type="text"
+                            placeholder="Enter Player 1 Name">
+                    </div>
+                    <div class="block"></div>
+                    <div class="column is-4">
+                        <input class="input is-info is-small" id="p2Name" type="text" placeholder="Enter Player 2 Name">
+                    </div>
+                    <div id="gamePointRightBlock2" class="column is-2 has-background-info is-hidden-mobile"></div>
+                </div>
+                <div class="buttons is-centered has-text-centered is-rounded">
+                    <button class="button is-info is-light is-large" id="saveNames" disabled>Save Names and
+                        Play!</button>
+                </div>
+                <div id="winnerAnnounce" class="content is-size-1 has-text-black has-text-weight-bold" hidden></div>
+                <!--Winner Announcement-->
+                <div class="hideOnLoad" hidden>
+                    <div class="content is-large">
+                        <h1 id="scorekeeper"><span class="has-text-primary" id="p1Display">0</span> to <span
+                                class="has-text-info" id="p2Display">0</span></h1>
+                    </div>
+                    <div class="buttons is-centered has-text-centered">
+                        <button id="p1add" class="button is-primary is-medium is-rounded my-3">...waiting for
+                            name...</button>
+                        <button id="p2add" class="button is-info is-medium is-rounded my-3">...waiting for
+                            name...</button>
+
+                    </div>
+                    <div class="buttons is-centered has-text-centered">
+                        <button id="resetScore" class="button is-small my-3">Reset Score</button>
+                        <button id="changeNames" class="button is-small my-3">Change
+                            Names</button>
+                    </div>
+                </div>
+            </div>
+            <div id="gamePointRightBlock1" class="column is-2 has-background-info is-hidden-mobile"></div>
+            <!--Empty column to right of image-->
+        </div>
+
+
+
+
+    </section>
+    <script src="app.js"></script>
+</body>
+
+</html>
